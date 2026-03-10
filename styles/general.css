@@ -1,0 +1,129 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0px;
+    background-color: #1E1E1E;
+}
+
+.wrapper {
+    display: flex;
+    justify-content:center;
+}
+
+.bayan {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+    height: calc(100vh - 100px); /* Если убрать, высота аккордиона станет равной сумме высоте элементов */
+
+}
+
+.title-div {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex: 1;
+}
+
+
+.bayan-row {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    cursor: pointer;
+}
+
+.title, .text {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 4.2rem;
+    color: lightgray;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.text-icon-div {
+    display: flex;
+    align-items: center;
+}
+
+.text-div {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+.text {
+    color: rgb(82, 82, 82);
+
+    transition: color 1s;
+    font-size: 3.4rem;
+    width: 90%;
+    margin: 0;
+}
+
+.radio {
+    display: none;
+}
+
+
+.arrow-image-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    
+    /* margin-left: 50px; */
+}
+
+.arrow-border {
+    display: none;
+
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(82, 82, 82);
+    transition: border-color 1s;
+}
+
+.arrow-image {
+    /* filter: invert(100%);
+    -webkit-filter: invert(100%); */
+
+    /* flex: 1; */
+    /* flex: 1; */
+    display: none;
+
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.meme-image {
+    aspect-ratio: 1 / 1;
+    height: 10%;
+    object-fit: contain;
+}
+
+.meme-image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    
+    height: 0px; /*очень важно! */
+}

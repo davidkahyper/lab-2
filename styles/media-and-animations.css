@@ -1,0 +1,179 @@
+    @media screen and (min-width: 1024.02px) /* компик */
+    {   
+    .radio:checked ~ .bayan-row .meme-image-div, .bayan-row:hover .meme-image-div {
+        height: 40vh;
+    }
+
+    
+}
+
+@media screen and (min-width: 768.02px) and (max-width: 1024.02px) { /* планшет */
+    /* Общие настройки */
+    .bayan {
+        width: 60%;
+    }
+
+    .title {
+        font-size: 3.4rem;
+    }
+
+    .text {
+        font-size: 2.4rem;
+    }
+
+    .arrow-image-div {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+
+    .bayan-row {
+        padding-bottom: 1px;
+    }
+
+    .radio:checked ~ .bayan-row .meme-image-div {
+        height: 35vh;
+    }
+    
+}
+
+@media screen and (max-width: 768.02px) { /* телефон */
+    .bayan {
+        width: 80%;
+    }
+
+    .title {
+        font-size: 2.8rem;
+    }
+
+    .text {
+        font-size: 1.8rem;
+    }
+
+    .radio:checked ~ .meme-image-div {
+        height: 30vh;
+    }
+
+    .arrow-image-div {
+        width: 1.8rem;
+        height: 1.8rem;
+    }   
+    
+    .radio:checked ~ .bayan-row .meme-image-div {
+        height: 30vh;
+    }
+}
+
+
+
+
+
+
+
+
+/*
+
+Настройки анимации
+
+*/
+
+/* общее */
+.radio:checked ~ .bayan-row .arrow-border {
+        border-color: orange;
+        transform: rotate(180deg);
+        transition: border-color 1s;
+    }
+
+    .radio:checked ~ .bayan-row .meme-image { /* Анимация изображения */
+        height: 100%;
+        transition: height 0.2s;
+    }
+
+    .radio:checked ~ .bayan-row p.text { /* текст элемента */
+        color: rgb(255, 153, 0);
+    }
+
+    
+
+@media screen and (min-width: 1024.02px) { /* для компика */
+    .bayan-row:hover p.text {
+        color: rgb(196, 127, 0);
+    }
+
+    .bayan-row:hover .arrow-border {
+        border-color: rgb(196, 127, 0);
+    }
+
+    .bayan-row:hover .meme-image {
+        height: 100%;
+        transition: height 0.2s;
+    }
+    
+    /* Если на элемент навелись */
+    .bayan:hover .text {
+        color: rgb(158, 158, 158);   
+    }
+
+    .bayan:hover .arrow-border {
+        border-color: rgb(158, 158, 158);
+    }
+
+    
+
+    .bayan:hover .arrow-image, .bayan:hover .arrow-border {
+        display: block;
+    }
+
+    .radio:not(:checked) ~ .bayan-row:hover .arrow-image-div  {
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode:forwards;
+        animation-delay: 1s;
+    }
+
+    .radio:not(:checked) ~ .bayan-row:hover .arrow-image  {
+        animation-name: translateDown;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-fill-mode:alternate;
+        animation-delay: 2s;
+    }
+ }
+
+ @media screen and (max-width: 1024.02px) { /* для сенсорных устройств */
+    /* Настройки анимации */
+    .arrow-image, .arrow-border {
+        display: block;
+    }
+
+    .radio:checked ~ .bayan-row .arrow-border {
+        border-color: orange;
+        transform: rotate(180deg);
+        transition: border-color 1s, transform 1s;
+    }
+
+    .radio:checked ~ .bayan-row p.text { /* текст элемента */
+        color: rgb(255, 153, 0);
+    /* font-weight: 300; */
+    }
+
+    .text {
+        color: rgb(158, 158, 158); 
+    }
+ }
+
+
+
+
+
+
+ 
+@keyframes rotate {
+    0%{transform: rotateZ(0deg);}
+    100%{transform: rotateZ(180deg);}
+}
+
+@keyframes translateDown {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-30px);}
+}

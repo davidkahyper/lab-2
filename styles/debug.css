@@ -1,0 +1,28 @@
+body {
+    background-color: #1E1E1E;
+}
+
+.wrapper {
+    background-color: red;
+}
+
+.bayan {
+    background-color: blue;
+}
+
+.line-div {
+    background-color: black;
+}
+
+
+@media screen and (max-width: 768.02px) {
+    .wrapper {
+         background-color: palevioletred;
+    }
+}
+
+@media screen and (min-width: 769.02px) and (max-width: 1024.02px) { /* планшет */
+    .wrapper {
+         background-color: green;
+    }
+}
