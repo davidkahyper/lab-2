@@ -26,10 +26,6 @@
         height: 2.4rem;
     }
 
-    .bayan-row {
-        padding-bottom: 1px;
-    }
-
     .radio:checked ~ .bayan-row .meme-image-div {
         height: 35vh;
     }
@@ -160,6 +156,11 @@
     .text {
         color: rgb(158, 158, 158); 
     }
+
+     
+    .bayan-row {
+        padding-bottom: 1px;
+    }
  }
 
 
@@ -176,4 +177,5 @@
 @keyframes translateDown {
     0%{transform: translateY(0px);}
     50%{transform: translateY(-30px);}
+
 }
